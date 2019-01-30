@@ -22,4 +22,13 @@ Player.prototype.addTurnTotal = function() {
   return turnTotal;
 }
 
+Player.prototype.addScoreTotal = function() {
+    return ; /
+  } else {
+
+  }
+  console.log(dice);
+  return scoreTotal;
+}
+
 //user interface
