@@ -9,11 +9,14 @@ function getRandomInt(min, max) {
 function Player(score, turnTotal) {
   this.score = score;
   this.turnTotal = turnTotal;
+  this.turn = true;
+  this.hold;
 }
 
 Player.prototype.addTurnTotal = function() {
   var dice = getRandomInt(1, 7);
   if (dice ===  1) {
+    turn = false;
     return turnTotal;
   } else {
     turnTotal += dice;
@@ -22,13 +25,19 @@ Player.prototype.addTurnTotal = function() {
   return turnTotal;
 }
 
-Player.prototype.addScoreTotal = function() {
-    return ; /
-  } else {
-
-  }
-  console.log(dice);
-  return scoreTotal;
+Player.prototype.holdTurn = function() {
+  console.log(score);
+  turn = false;
+  return score += turnTotal;
 }
+
+// Player.prototype.addScoreTotal = function() {
+//     return ;
+//   } else {
+//
+//   }
+//   console.log(dice);
+//   return scoreTotal;
+// }
 
 //user interface
