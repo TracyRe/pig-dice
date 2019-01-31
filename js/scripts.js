@@ -6,9 +6,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var dice = getRandomInt(1, 7);
-
-
+// var dice = getRandomInt(1, 7);
 
 function Player() {
   this.score = 0;
@@ -30,53 +28,35 @@ Player.prototype.addTurnTotal = function() {
 }
 
 Player.prototype.holdTurn = function() {
-  console.log(score);
-  turn = false;
-  return score += turnTotal;
+  console.log(this.score);
+  this.turn = false;
+  return this.score += this.turnTotal;
 }
-
-Player.prototype.addScoreTotal = function() {
-    return ;
-  } else {
-
-  }
-  console.log(dice);
-  return scoreTotal;
-}
-
 
 
 //user interface
 $(function() {
 
-var player1 = {
-  score: 0,
-}
-
-var player2 = {
-  score: 0,
-}
-
-
+var player1 = new Player ();
+var player2 = new Player ();
 
   $("button#roll1").click(function(){
-    var roll1 = addTurnTotal();
+    var roll1 = player1.addTurnTotal();
     $(".player1-score").text(player1.score);
   });
 
   $("button#hold1").click(function(){
-    var hold1 = holdTurn();
+    var hold1 = player1.holdTurn();
 
     $(".player1-score").text(player1.score);
   });
   $("button#roll2").click(function(){
-    var roll2 = addTurnTotal();
+    var roll2 = player2.addTurnTotal();
     $(".player2-score").text(player2.score);
   });
 
   $("button#hold2").click(function(){
-    var hold2 = holdTurn();
-
+    var hold2 = player2.holdTurn();
     $(".player2-score").text(player2.score);
   });
 });
