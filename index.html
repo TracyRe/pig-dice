@@ -12,12 +12,12 @@
   <body>
     <div class="container-fluid">
       <h1>Dino and Tracy's Pig Dice Game</h1>
-      <div class="content-wrapper">        
+      <div class="content-wrapper">
         <div class="well">
           <h1>Player 1<span class="player1-winner"> Winner!</span></h1>
           <h2>Score: <span class="player1-score"></span></h2>
-          <h4><strong>Current Roll</strong> <span class="player1-roll"></span></h4>
-          <h3><strong>Turn Total</strong> <span class="player1-turn-total"></span></h3>
+          <h4>Current Roll: <span class="player1-roll"></span></h4>
+          <h3>Turn Total: <span class="player1-turn-total"></span></h3>
           <div id="player1-buttons" class="button-row">
             <button id="roll1" class="btn btn-primary" type="button" name="roll">Roll</button>
             <button id="hold1" class="btn btn-info" type="button" name="hold">Hold</button>
@@ -26,13 +26,22 @@
         <div class="well">
           <h1>Player 2<span class="player2-winner"> Winner!</span></h1>
           <h2>Score: <span class="player2-score"></span></h2>
-          <h4><strong>Current Roll</strong> <span class="player2-roll"></span></h4>
-          <h3><strong>Turn Total</strong> <span class="player2-turn-total"></span></h3>
+          <h4>Current Roll: <span class="player2-roll"></span></h4>
+          <h3>Turn Total: <span class="player2-turn-total"></span></h3>
           <div  id="player2-buttons" class="button-row">
             <button id="roll2" class="btn btn-primary" type="button" name="roll">Roll</button>
             <button id="hold2" class="btn btn-info" type="button" name="hold">Hold</button>
           </div>
         </div>
+      </div>
+      <div class="rules">
+        <h2>Rules of Pig Dice</h2>
+        <ol>
+          <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+          <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+          <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+          <li>The first player to reach 100 or more will win.</li>
+        </ol>
       </div>
 
     </div>

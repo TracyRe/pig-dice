@@ -1,4 +1,13 @@
   /* ******** MOBILE FIRST DEFAULT STYLES (*********) */
+
+body {
+  background-color: #00838f;
+}
+
+ol > li {
+  font-size: 18px;
+}
+
 .container-fluid {
   padding: 10px;
 }
@@ -10,19 +19,25 @@
   justify-content: center;
   align-items: center;
 }
-.well {
-  flex: 1 0 auto;
-  min-width: 380px;
-  min-height: 260px;
-}
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: #fffbf2;
+}
+
+.well {
+  flex: 1 0 auto;
+  text-align: center;
+  min-width: 90%;
+  min-height: 260px;
+  background-color: #fffbf2;
+  color: #333333;
 }
 
 .well h1 {
   margin-top: 0;
+  color: #333333;
 }
 
 #player2-buttons {
@@ -32,6 +47,13 @@ h1 {
 
 .player1-winner, .player2-winner {
   display: none;
+}
+.rules {
+  color: #fffbf2;
+}
+
+.rules h2 {
+  text-align: center;
 }
 
 
@@ -53,10 +75,21 @@ h1 {
 
   .well {
     flex: 1 0 auto;
-    min-width: auto;
+    width: 40%;
     min-height: 260px;
     margin: 0 20px 0 20px;
-
   }
 
+  .rules {
+    width: 60%;
+    margin: 10px auto 10px auto;
+  }
+
+  .rules h2 {
+    text-align: left;
+  }
+
+  .rules ol {
+    margin-left: -2rem;
+  }
 }
