@@ -16,7 +16,6 @@ Objects, constructors, prototypes.
 
 Specification | Input | Output
 ------------- | ----- | ------
-
 When a player rolls, a number between 1 and 6 is randomly generated | "Roll" | 3
 . | "Roll" | 4
 . | "Roll" | 4
