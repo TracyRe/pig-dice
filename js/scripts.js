@@ -46,6 +46,10 @@ var player2 = new Player ();
 
   $("button#roll1").click(function(){
     var roll1 = player1.addTurnTotal();
+    if (player1.dice === 1) {
+      $("#player1-buttons").toggle();
+      $("#player2-buttons").toggle();
+    }
     $(".player1-roll").text(player1.dice);
     console.log(player1.dice);
     $("span.player1-turn-total").text(player1.turnTotal);
@@ -60,6 +64,10 @@ var player2 = new Player ();
   });
   $("button#roll2").click(function(){
     var roll2 = player2.addTurnTotal();
+    if (player2.dice === 1) {
+      $("#player1-buttons").toggle();
+      $("#player2-buttons").toggle();
+    }
     $(".player2-roll").text(player2.dice);
     $(".player2-turn-total").text(player2.turnTotal);
   });
