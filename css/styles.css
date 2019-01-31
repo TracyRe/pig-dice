@@ -1,3 +1,30 @@
+  /* ******** MOBILE FIRST DEFAULT STYLES (*********) */
+.container-fluid {
+  padding: 10px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.well {
+  flex: 1 0 auto;
+  min-width: 380px;
+  min-height: 260px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.well h1 {
+  margin-top: 0;
+}
+
 #player2-buttons {
   display: none;
 
@@ -5,4 +32,31 @@
 
 .player1-winner, .player2-winner {
   display: none;
+}
+
+
+
+
+/* ******** NON-MOBILE STYLES (*********) */
+@media only screen and (min-width: 600px) {
+  .container-fluid {
+    padding: 10px 40px 10px 40px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: top;
+  }
+
+  .well {
+    flex: 1 0 auto;
+    min-width: auto;
+    min-height: 260px;
+    margin: 0 20px 0 20px;
+
+  }
+
 }

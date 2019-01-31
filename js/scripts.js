@@ -89,6 +89,8 @@ var player2 = new Player ();
       $("#player1-buttons").hide();
       $("#player2-buttons").hide();
       $(".player2-winner").show();
+      $(".player2-roll").text(player2.dice);
+      $(".player2-turn-total").text(player2.turnTotal);
     }
   });
 // debugger;
