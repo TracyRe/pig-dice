@@ -53,6 +53,8 @@ var player2 = new Player ();
 
   $("button#hold1").click(function(){
     var hold1 = player1.holdTurn();
+    $("#player1-buttons").toggle();
+    $("#player2-buttons").toggle();
 
     $(".player1-score").text(player1.score);
   });
@@ -65,5 +67,7 @@ var player2 = new Player ();
   $("button#hold2").click(function(){
     var hold2 = player2.holdTurn();
     $(".player2-score").text(player2.score);
+    $("#player1-buttons").toggle();
+    $("#player2-buttons").toggle();
   });
 });
