@@ -17,7 +17,7 @@ function Player() {
 
 Player.prototype.addTurnTotal = function() {
   var dice = getRandomInt(1, 7);
-  console.log(dice);
+  // console.log(dice);
   if (dice ===  1) {
     this.turn = false;
     this.dice = 1;
@@ -30,7 +30,7 @@ Player.prototype.addTurnTotal = function() {
 }
 
 Player.prototype.holdTurn = function() {
-  console.log(this.score);
+  // console.log(this.score);
   this.turn = false;
   this.score += this.turnTotal;
   this.turnTotal = 0;
@@ -51,7 +51,7 @@ var player2 = new Player ();
       $("#player2-buttons").toggle();
     }
     $(".player1-roll").text(player1.dice);
-    console.log(player1.dice);
+    // console.log(player1.dice);
     $("span.player1-turn-total").text(player1.turnTotal);
   });
 
@@ -61,6 +61,12 @@ var player2 = new Player ();
     $("#player2-buttons").toggle();
 
     $(".player1-score").text(player1.score);
+
+    if (player1.score >= 100 ) {
+      $("#player1-buttons").hide();
+      $("#player2-buttons").hide();
+      $(".player1-winner").show();
+    }
   });
   $("button#roll2").click(function(){
     var roll2 = player2.addTurnTotal();
@@ -74,8 +80,17 @@ var player2 = new Player ();
 
   $("button#hold2").click(function(){
     var hold2 = player2.holdTurn();
-    $(".player2-score").text(player2.score);
     $("#player1-buttons").toggle();
     $("#player2-buttons").toggle();
+
+    $(".player2-score").text(player2.score);
+
+    if (player2.score >= 100 ) {
+      $("#player1-buttons").hide();
+      $("#player2-buttons").hide();
+      $(".player2-winner").show();
+    }
   });
+// debugger;
+
 });

@@ -2,3 +2,7 @@
   display: none;
 
 }
+
+.player1-winner, .player2-winner {
+  display: none;
+}
