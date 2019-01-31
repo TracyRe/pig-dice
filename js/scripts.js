@@ -61,11 +61,18 @@ var player2 = new Player ();
     $("#player2-buttons").toggle();
 
     $(".player1-score").text(player1.score);
+    $(".player1-roll").text("");
+    $(".player1-turn-total").text("");
 
     if (player1.score >= 100 ) {
       $("#player1-buttons").hide();
       $("#player2-buttons").hide();
       $(".player1-winner").show();
+
+      $(".player1-roll").text("");
+      $(".player1-turn-total").text("");
+      $(".player2-roll").text("");
+      $(".player2-turn-total").text("");
     }
   });
   $("button#roll2").click(function(){
@@ -84,6 +91,8 @@ var player2 = new Player ();
     $("#player2-buttons").toggle();
 
     $(".player2-score").text(player2.score);
+    $(".player2-roll").text("");
+    $(".player2-turn-total").text("");
 
     if (player2.score >= 100 ) {
       $("#player1-buttons").hide();
@@ -91,6 +100,11 @@ var player2 = new Player ();
       $(".player2-winner").show();
       $(".player2-roll").text(player2.dice);
       $(".player2-turn-total").text(player2.turnTotal);
+
+      $(".player1-roll").text("");
+      $(".player1-turn-total").text("");
+      $(".player2-roll").text("");
+      $(".player2-turn-total").text("");
     }
   });
 // debugger;
