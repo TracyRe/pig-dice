@@ -1,43 +1,43 @@
-//business logic
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function Player(score, turnTotal) {
-  this.score = score;
-  this.turnTotal = turnTotal;
-  this.turn = true;
-  this.hold;
-}
-
-Player.prototype.addTurnTotal = function() {
-  var dice = getRandomInt(1, 7);
-  if (dice ===  1) {
-    turn = false;
-    return turnTotal;
-  } else {
-    turnTotal += dice;
-  }
-  console.log(dice);
-  return turnTotal;
-}
-
-Player.prototype.holdTurn = function() {
-  console.log(score);
-  turn = false;
-  return score += turnTotal;
-}
-
-// Player.prototype.addScoreTotal = function() {
-//     return ;
-//   } else {
+// //business logic
 //
-//   }
-//   console.log(dice);
-//   return scoreTotal;
+// function getRandomInt(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min)) + min;
 // }
-
-//user interface
+//
+//
+// var turnTotal = [];
+//
+// function addTurnTotal() {
+//   var dice = getRandomInt(1, 7);
+//   console.log(dice);
+//   // debugger;
+//   if (dice !==  1) {
+//     turnTotal.push(dice);
+//     console.log(turnTotal);
+//     var sumTurn = turnTotal.reduce(function (accumulator, currentValue) {
+//     return accumulator + currentValue;
+//     }, 0);
+//     console.log(sumTurn);
+//     return sumTurn;
+//   } else {
+//     console.log(dice);
+//     alert("You lose!");
+//     turnTotal=[0];
+//     return turnTotal;
+//   }
+//   // console.log(dice);
+// }
+//
+//
+//
+//
+//
+// function holdTurn(currentScore, currentTurn) {
+//   var turn = sumTurn;
+//   var currentScore = 0;
+//   currentScore = currentScore + turn;
+//   console.log(currentScore);
+//   return currentScore;
+// }

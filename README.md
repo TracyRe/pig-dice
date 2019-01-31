@@ -29,8 +29,8 @@ The system will display each player's score
 . | "Roll" | 1
 // When player1 rolls 1, the total does not increase  | 1 | Player1 score does not increase
 When player1 rolls 1, player1's turn ends  | 1 | Player2's turn
-When player1 rolls >1, the turn total increases by the value of the roll  | 2 | turn total: +2
-When player1 rolls >1,  player1 rolls again  | 2 | Player1's turn
+// When player1 rolls >1, the turn total increases by the value of the roll  | 2 | turn total: +2
+// When player1 rolls >1,  player1 rolls again  | 2 | Player1's turn
 When player1 chooses to "hold", player1's current turn total is added to player1's score | player1 hold AND player 1 current score = 7 AND player1 turn total = 5 | player1 new score = 12 AND player2's turn
 When either player's score is greater or equal to 100, the game ends | Score = 100 | End of game
 . | Score = 102 | End of game

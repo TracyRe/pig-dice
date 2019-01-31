@@ -6,52 +6,45 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// function Player(score, turnTotal) {
-//   this.score = score;
-//   this.turnTotal = turnTotal;
-// }
+var dice = getRandomInt(1, 7);
 
-var turnTotal = [];
-function addTurnTotal() {
-  var dice = getRandomInt(1, 7);
-  console.log(dice);
-  // debugger;
-  if (dice !==  1) {
-    turnTotal.push(dice);
-    console.log(turnTotal);
-    var sumTurn = turnTotal.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue;
-    }, 0);
-    console.log(sumTurn);
-    return sumTurn;
-  } else {
-    console.log(dice);
-    alert("You lose!");
-    turnTotal=[0];
-    return turnTotal;
-  }
-  // console.log(dice);
+
+
+function Player() {
+  this.score = 0;
+  this.turnTotal = 0;
+  this.turn = true;
+  this.hold;
 }
 
+Player.prototype.addTurnTotal = function() {
+  var dice = getRandomInt(1, 7);
+  if (dice ===  1) {
+    this.turn = false;
+    return this.turnTotal;
+  } else {
+    this.turnTotal += dice;
+  }
+  console.log(dice);
+  return this.turnTotal;
+}
 
-
-
-
-function holdTurn() {
+Player.prototype.holdTurn = function() {
   console.log(score);
+  turn = false;
   return score += turnTotal;
 }
 
+Player.prototype.addScoreTotal = function() {
+    return ;
+  } else {
 
-// function roll(num) {
-//   var turnScoreArray = [];
-//   turnScoreArray.push(num);
-//   if (num !== 1) {
-//   } else {
-//     turnScoreArray = 0;
-//   }
-//   return turnScoreArray;
-// }
+  }
+  console.log(dice);
+  return scoreTotal;
+}
+
+
 
 //user interface
 $(function() {
