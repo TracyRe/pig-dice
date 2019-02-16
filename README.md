@@ -52,6 +52,8 @@ When either player reaches or exceeds 100, neither player can continue to roll |
 
 ## Setup/Installation Requirements
 
+* View at https://dinowins.github.io/pig-dice/
+  or https://tracyre.github.io/pig-dice/
 * Clone from https://github.com/dinowins/pig-dice.git
   or https://github.com/TracyRe/pig-dice.git
 * Open in browser of your choice
